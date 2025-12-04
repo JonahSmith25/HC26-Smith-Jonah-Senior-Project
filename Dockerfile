@@ -10,8 +10,8 @@ COPY . .
 # Move into the Spring Boot project folder
 WORKDIR /home/gradle/src/HanoverCollegeMarketplace
 
-# Build the jar (skip tests to keep it fast)
-RUN ./gradlew bootJar --no-daemon
+# Build the jar 
+RUN bash ./gradlew bootJar --no-daemon
 
 # ====== RUNTIME STAGE ======
 FROM eclipse-temurin:17-jre
